@@ -34,9 +34,9 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * Backend: Python, Django
  * Database: SQL
  
-### Project Management Tools
+### Project Management/Collaboration Tools
  * GitHub
- * Google Doc
+ * Google Doc/Slides
  * Trello
  
 ### PARAMETERS WE COLLECT FROM USERS
