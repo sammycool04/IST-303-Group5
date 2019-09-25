@@ -24,6 +24,7 @@ Meeting with Professor Regularly, Neighborhood Community
  * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
  * A subscribed business user can advertise and list their housing on the web page
  * A user should be able to sort the listings based on their personalized rankings preference
+ * A user can see both a map view and text listings
 
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
