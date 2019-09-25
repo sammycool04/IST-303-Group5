@@ -29,12 +29,10 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * A user can see both a map view and text listings of search results
  * A user can make a change to their preferences without starting over
  
-
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
  * Backend: Python, Django
  * Database: SQL
- * Work Management: Kanban methods
  
 ### PARAMETERS WE COLLECT FROM USERS
  * Distance to certain places, areas, etc...
