@@ -17,7 +17,9 @@ Team FinalLists
 The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limaye, and Phillip Wang.
 
 ### STAKEHOLDERS
-Professor Wallace, Neighborhood
+ * People who are looking for a place to live
+ * Landloards and proerty owners
+ * Real estate agents/professionals
 
 ### USER STORIES
  * Any user would be able to input their preference parameters when they open the web app
