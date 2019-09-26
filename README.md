@@ -22,14 +22,12 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * Real estate agents/professionals
 
 ### USER STORIES
- * Any user should be able to search by location and property features only
- * Any user would be able to input their preference parameters when they open the web app as an added feature
- * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
- * A user should be able to sort the listings based on their personalized rankings preference
- * A user can see both a map view and text listings of search results
- * A user can make a change to their preferences without starting over
- * A subscribed business user can advertise and list their housing on the web page
- * The estimated completetion time for the whole project would be 13 weeks. And by the end of 10th weeks in our Fall 2019 semester, we will have our basic web features and functions completed.
+ * Any user should be able to search by location and property features only (ETC Milestone 1)
+ * Any user would be able to input their preference parameters when they open the web app as an added feature (ETC Milestone 1)
+ * A registered user is able to save listings, contact housing hosts and access other web features on the web pages (ETC Milestone 1)
+ * A user can see both a map view and text listings of search results (ETC Milestone 1)
+ * A user should be able to sort the listings based on their personalized rankings preference (ETC Milestone 2)
+ * A user can make a change to their preferences without starting over (ETC Milestone 2)
  
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
