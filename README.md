@@ -29,6 +29,7 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * A user can see both a map view and text listings of search results
  * A user can make a change to their preferences without starting over
  * A subscribed business user can advertise and list their housing on the web page
+ * The estimated completetion time for the whole project would be 13 weeks. And by the end of 10th weeks in our Fall 2019 semester, we will have our basic web features and functions completed.
  
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
