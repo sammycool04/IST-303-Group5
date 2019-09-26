@@ -22,12 +22,13 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * Real estate agents/professionals
 
 ### USER STORIES
- * Any user would be able to input their preference parameters when they open the web app
+ * Any user should be able to search by location and property features only
+ * Any user would be able to input their preference parameters when they open the web app as an added feature
  * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
- * A subscribed business user can advertise and list their housing on the web page
  * A user should be able to sort the listings based on their personalized rankings preference
  * A user can see both a map view and text listings of search results
  * A user can make a change to their preferences without starting over
+ * A subscribed business user can advertise and list their housing on the web page
  
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
