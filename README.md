@@ -50,6 +50,12 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
 User stories will be drafted and appropriately scheduled in order to organize related activities throughout
 this project time-frame.  The user stories will center around requirements for what the user interface will 
 include, what the web application ranking options will include, as well as accessiblity to the web application.
-Data sources will be identified, validated, and documented to ensure that the web application is held up
+Data sources will be identified, validated, and documented to ensure that the web application is held up by 
 by realistic data or inferred by real data.
---
+
+### PROJECT CONCEPT PRESENTATION PART A FEEDBACK AND NEXT STEPS:
+* Stakeholder feedback via survey responses from classmates will be sought. A survey will be drafted and distributed to 
+  refine preference categories.
+* propertyfinder.ae was suggested for review for ideas
+* Looking beyond API sources was suggested for data sources to ensure un-biased data is used
+* Query on what indexes will be used was brought up to offset implied or direct bias
