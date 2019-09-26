@@ -22,12 +22,12 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * Real estate agents/professionals
 
 ### USER STORIES
- * Any user should be able to search by location and property features only (ETC Milestone 1)
- * Any user would be able to input their preference parameters when they open the web app as an added feature (ETC Milestone 1)
- * A registered user is able to save listings, contact housing hosts and access other web features on the web pages (ETC Milestone 1)
- * A user can see both a map view and text listings of search results (ETC Milestone 1)
- * A user should be able to sort the listings based on their personalized rankings preference (ETC Milestone 2)
- * A user can make a change to their preferences without starting over (ETC Milestone 2)
+ * Any user should be able to search by location and property features only (ETC Milestone 1, 5th week)
+ * Any user would be able to input their preference parameters when they open the web app as an added feature (ETC Milestone 1, 7th week)
+ * A registered user is able to save listings, contact housing hosts and access other web features on the web pages (ETC Milestone , 8th week)
+ * A user can see both a map view and text listings of search results (ETC Milestone 1, 10th week)
+ * A user should be able to sort the listings based on their personalized rankings preference (ETC Milestone 2, 12th week)
+ * A user can make a change to their preferences without starting over (ETC Milestone 2, 14th week)
  
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
