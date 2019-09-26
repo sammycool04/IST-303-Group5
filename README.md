@@ -56,6 +56,8 @@ by realistic data or inferred by real data.
 ### PROJECT CONCEPT PRESENTATION PART A FEEDBACK AND NEXT STEPS:
 * Stakeholder feedback via survey responses from classmates will be sought. A survey will be drafted and distributed to 
   refine preference categories.
-* propertyfinder.ae was suggested for review for ideas
-* Looking beyond API sources was suggested for data sources to ensure un-biased data is used
-* Query on what indexes will be used was brought up to offset implied or direct bias
+* propertyfinder.ae was suggested for review for ideas.
+* Looking beyond API sources was suggested for data sources to ensure un-biased data is used.
+* Query on what indexes will be used was brought up to offset implied or direct bias.
+* Further exploration on how ranking (1 through 5 versus most importnat to least important, etc.) should be set to ensure
+  the recommendations provided by the search is not too restrictive.
