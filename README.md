@@ -30,46 +30,46 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
 
 ### USER STORIES
  * Milestone 1(1)/(~ 2 weeks) 
-    * Any user should be able to search by location and property features only
-     * TASKS: 
-      * Create and publish webpage UI Design requirements.
-      * Create and publish UI design of associated webpages.
-      * Source data for use in development.
-      * Test and run simple queries in Django. Develop back-end code for associated webpages.
-      * Look into database structure to house source data.
+   * Any user should be able to search by location and property features only
+      * TASKS: 
+         * Create and publish webpage UI Design requirements.
+         * Create and publish UI design of associated webpages.
+         * Source data for use in development.
+         * Test and run simple queries in Django. Develop back-end code for associated webpages.
+         * Look into database structure to house source data.
  * Milestone 1(2) /(~2 weeks)
-    * Any user would be able to input their preference parameters when they open the web app as an added feature 
-     * TASKS: 
-      * Create and publish webpage UI Design requirements as needed.
-      * Create and publish UI design of associated webpages.
-      * Source data for use in development as needed.
-      * Build database structure and have data for use.
-      * Test and run simple queries in Django. Develop back-end code for associated webpages.
+   * Any user would be able to input their preference parameters when they open the web app as an added feature 
+      * TASKS: 
+         * Create and publish webpage UI Design requirements as needed.
+         * Create and publish UI design of associated webpages.
+         * Source data for use in development as needed.
+         * Build database structure and have data for use.
+         * Test and run simple queries in Django. Develop back-end code for associated webpages.
  * Milestone 1.5(3)/(~ 2 weeks)
-    * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
-     * TASKS: 
-      * Create and publish webpage UI Design requirements as needed.
-      * Create and publish UI design of associated webpages.
-      * Build database structure and have data for use.
-      * Test and run simple queries in Django. 
-      * Develop back-end code for associated webpages and test codes.
+   * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
+      * TASKS: 
+         * Create and publish webpage UI Design requirements as needed.
+         * Create and publish UI design of associated webpages.
+         * Build database structure and have data for use.
+         * Test and run simple queries in Django. 
+         * Develop back-end code for associated webpages and test codes.
  * Milestone 2(4)/(~1.5 weeks)
-    * A user can make a change to their preferences without starting over
-     * TASKS: 
-      * Create and publish webpage UI Design requirements as needed 
-      * Maintain and address any database issues.
-      * Develop back-end code for associated webpage. Test codes.
+   * A user can make a change to their preferences without starting over
+      * TASKS: 
+         * Create and publish webpage UI Design requirements as needed 
+         * Maintain and address any database issues.
+         * Develop back-end code for associated webpage. Test codes.
  * Milestone 2(5)/(~1.5 weeks)
    * A user can see both a map view and text listings of search results
-    * TASKS: 
-     * Create and publish webpage UI Design requirements as needed 
-     * Maintain and address any database issues.
-     * Develop back-end code for associated webpage. Test codes.
+      * TASKS: 
+         * Create and publish webpage UI Design requirements as needed 
+         * Maintain and address any database issues.
+         * Develop back-end code for associated webpage. Test codes.
  * Milestone 2(6)/(~1.5 weeks) 
    * A user should be able to sort the listings based on their personalized rankings preference
-    * TASKS: 
-     * Develop back-end code for associated webpage. Test codes.
-     * Conduct sample user testing among team members.
+      * TASKS: 
+         * Develop back-end code for associated webpage. Test codes.
+         * Conduct sample user testing among team members.
 
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
