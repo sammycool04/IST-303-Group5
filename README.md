@@ -22,18 +22,19 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * Real estate agents/professionals
 
 ### USER STORIES
- * Any user should be able to search by location and property features only (ETC Milestone 1, 5th week) 
+ 1. Any user should be able to search by location and property features only (ETC Milestone 1, 5th week) 
  TASKS: 1) Identify, download, and test data sources 2) Review and document existing competitor offerrings and features
- * Any user would be able to input their preference parameters when they open the web app as an added feature (ETC Milestone 1, 7th week) 
+ 2. Any user would be able to input their preference parameters when they open the web app as an added feature (ETC Milestone 1, 7th week) 
  TASKS: 1) Identify, download and test data sources 2) Create UI design for webpage 3) Develop program supporting the UI design
- * A registered user is able to save listings, contact housing hosts and access other web features on the web pages (ETC Milestone , 8th week)
+ 3. A registered user is able to save listings, contact housing hosts and access other web features on the web pages (ETC Milestone , 8th week)
  TASKS: 1) Create associated UI Designs for webpages 2) Identify, download, and test data sources 3) Develop program supporting the UI designs and website functionality
- * A user can see both a map view and text listings of search results (ETC Milestone 1, 10th week)
- TASKS: 1) Identify, download, and test data sources 2) Create UI designs for webpages 3) Develop program supporting the UI designs and website functionality
- * A user should be able to sort the listings based on their personalized rankings preference (ETC Milestone 2, 12th week)
- TASKS: 1) Create UI Design 2) Develop program supporting the UI designs and website functionality
- * A user can make a change to their preferences without starting over (ETC Milestone 2, 14th week)
+  4. A user can make a change to their preferences without starting over (ETC Milestone 2, 14th week)
  TASKS: 1) Create UI deign for webpage 2) Develop program supporting the UI webpage design
+ 5. A user can see both a map view and text listings of search results (ETC Milestone 1, 10th week)
+ TASKS: 1) Identify, download, and test data sources 2) Create UI designs for webpages 3) Develop program supporting the UI designs and website functionality 
+ 6. A user should be able to sort the listings based on their personalized rankings preference (ETC Milestone 2, 12th week)
+ TASKS: 1) Create UI Design 2) Develop program supporting the UI designs and website functionality
+
  
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
