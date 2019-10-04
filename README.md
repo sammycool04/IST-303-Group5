@@ -16,6 +16,13 @@ Team FinalLists
 ### GROUP MEMBERS: 
 The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limaye, and Phillip Wang.
 
+### ROLES
+Sam - Web Developer
+Alex - UI Designer
+Kieu - Product Owner/Project Manager
+Rutuja - Database Developer
+Phillip - Web Developer
+
 ### STAKEHOLDERS
  * People who are looking for a place to live
  * Landloards and proerty owners
