@@ -17,11 +17,11 @@ Team FinalLists
 The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limaye, and Phillip Wang.
 
 ### ROLES
-Sam - Web Developer
-Alex - UI Designer
-Kieu - Product Owner/Project Manager
-Rutuja - Database Developer
-Phillip - Web Developer
+* Sam - Web Developer
+* Alex - UI Designer
+* Kieu - Product Owner/Project Manager
+* Rutuja - Database Developer
+* Phillip - Web Developer
 
 ### STAKEHOLDERS
  * People who are looking for a place to live
@@ -29,47 +29,47 @@ Phillip - Web Developer
  * Real estate agents/professionals
 
 ### USER STORIES
- Milestone 1(1)/(~ 2 weeks) 
-  Any user should be able to search by location and property features only
-    TASKS: 
-    1) Create and publish webpage UI Design requirements.
-    2) Create and publish UI design of associated webpages.
-    3) Source data for use in development.
-    4) Test and run simple queries in Django. Develop back-end code for associated webpages.
-    5) Look into database structure to house source data.
- Milestone 1(2) /(~2 weeks)
-  Any user would be able to input their preference parameters when they open the web app as an added feature 
-    TASKS: 
-    1) Create and publish webpage UI Design requirements as needed.
-    2) Create and publish UI design of associated webpages.
-    3) Source data for use in development as needed.
-    4) Build database structure and have data for use.
-    5) Test and run simple queries in Django. Develop back-end code for associated webpages.
- Milestone 1.5(3)/(~ 2 weeks)
-  A registered user is able to save listings, contact housing hosts and access other web features on the web pages
-    TASKS: 
-    1) Create and publish webpage UI Design requirements as needed.
-    2) Create and publish UI design of associated webpages.
-    4) Build database structure and have data for use.
-    5) Test and run simple queries in Django. 
-    6)Develop back-end code for associated webpages and test codes.
- Milestone 2(4)/(~1.5 weeks)
-  A user can make a change to their preferences without starting over
-    TASKS: 
-    1) Create and publish webpage UI Design requirements as needed 
-    2) Maintain and address any database issues.
-    3) Develop back-end code for associated webpage. Test codes.
- Milestone 2(5)/(~1.5 weeks)
-  A user can see both a map view and text listings of search results
-    TASKS: 
-    1) Create and publish webpage UI Design requirements as needed 
-    2) Maintain and address any database issues.
-    3) Develop back-end code for associated webpage. Test codes.
- Milestone 2(6)/(~1.5 weeks) 
-  A user should be able to sort the listings based on their personalized rankings preference
-    TASKS: 
-    1) Develop back-end code for associated webpage. Test codes.
-    2) Conduct sample user testing among team members.
+ * Milestone 1(1)/(~ 2 weeks) 
+    * Any user should be able to search by location and property features only
+     * TASKS: 
+      * Create and publish webpage UI Design requirements.
+      * Create and publish UI design of associated webpages.
+      * Source data for use in development.
+      * Test and run simple queries in Django. Develop back-end code for associated webpages.
+      * Look into database structure to house source data.
+ * Milestone 1(2) /(~2 weeks)
+    * Any user would be able to input their preference parameters when they open the web app as an added feature 
+     * TASKS: 
+      * Create and publish webpage UI Design requirements as needed.
+      * Create and publish UI design of associated webpages.
+      * Source data for use in development as needed.
+      * Build database structure and have data for use.
+      * Test and run simple queries in Django. Develop back-end code for associated webpages.
+ * Milestone 1.5(3)/(~ 2 weeks)
+    * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
+     * TASKS: 
+      * Create and publish webpage UI Design requirements as needed.
+      * Create and publish UI design of associated webpages.
+      * Build database structure and have data for use.
+      * Test and run simple queries in Django. 
+      * Develop back-end code for associated webpages and test codes.
+ * Milestone 2(4)/(~1.5 weeks)
+    * A user can make a change to their preferences without starting over
+     * TASKS: 
+      * Create and publish webpage UI Design requirements as needed 
+      * Maintain and address any database issues.
+      * Develop back-end code for associated webpage. Test codes.
+ * Milestone 2(5)/(~1.5 weeks)
+   * A user can see both a map view and text listings of search results
+    * TASKS: 
+     * Create and publish webpage UI Design requirements as needed 
+     * Maintain and address any database issues.
+     * Develop back-end code for associated webpage. Test codes.
+ * Milestone 2(6)/(~1.5 weeks) 
+   * A user should be able to sort the listings based on their personalized rankings preference
+    * TASKS: 
+     * Develop back-end code for associated webpage. Test codes.
+     * Conduct sample user testing among team members.
 
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
