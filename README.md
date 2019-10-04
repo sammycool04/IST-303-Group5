@@ -32,36 +32,44 @@ Phillip - Web Developer
  Milestone 1(1)/(~ 2 weeks) 
   Any user should be able to search by location and property features only
     TASKS: 
-    1) Identify, download, and test data sources 
-    2) Review and document existing competitor offerrings and features
+    1) Create and publish webpage UI Design requirements.
+    2) Create and publish UI design of associated webpages.
+    3) Source data for use in development.
+    4) Test and run simple queries in Django. Develop back-end code for associated webpages.
+    5) Look into database structure to house source data.
  Milestone 1(2) /(~2 weeks)
   Any user would be able to input their preference parameters when they open the web app as an added feature 
     TASKS: 
-    1) Identify, download and test data sources 
-    2) Create UI design for webpage 
-    3) Develop program supporting the UI design
+    1) Create and publish webpage UI Design requirements as needed.
+    2) Create and publish UI design of associated webpages.
+    3) Source data for use in development as needed.
+    4) Build database structure and have data for use.
+    5) Test and run simple queries in Django. Develop back-end code for associated webpages.
  Milestone 1.5(3)/(~ 2 weeks)
   A registered user is able to save listings, contact housing hosts and access other web features on the web pages
     TASKS: 
-    1) Create associated UI Designs for webpages 
-    2) Identify, download, and test data sources 
-    3) Develop program supporting the UI designs and website functionality
+    1) Create and publish webpage UI Design requirements as needed.
+    2) Create and publish UI design of associated webpages.
+    4) Build database structure and have data for use.
+    5) Test and run simple queries in Django. 
+    6)Develop back-end code for associated webpages and test codes.
  Milestone 2(4)/(~1.5 weeks)
   A user can make a change to their preferences without starting over
-   TASKS: 
-   1) Create UI deign for webpage 
-   2) Develop program supporting the UI webpage design
+    TASKS: 
+    1) Create and publish webpage UI Design requirements as needed 
+    2) Maintain and address any database issues.
+    3) Develop back-end code for associated webpage. Test codes.
  Milestone 2(5)/(~1.5 weeks)
   A user can see both a map view and text listings of search results
-   TASKS: 
-   1) Identify, download, and test data sources 
-   2) Create UI designs for webpages 
-   3) Develop program supporting the UI designs and website functionality 
+    TASKS: 
+    1) Create and publish webpage UI Design requirements as needed 
+    2) Maintain and address any database issues.
+    3) Develop back-end code for associated webpage. Test codes.
  Milestone 2(6)/(~1.5 weeks) 
   A user should be able to sort the listings based on their personalized rankings preference
-   TASKS: 
-   1) Create UI Design 
-   2) Develop program supporting the UI designs and website functionality
+    TASKS: 
+    1) Develop back-end code for associated webpage. Test codes.
+    2) Conduct sample user testing among team members.
 
 ### TECHNOLOGY
  * Frontend: HTML, CSS, JavaScript
