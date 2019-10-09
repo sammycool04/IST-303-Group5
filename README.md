@@ -76,7 +76,7 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
  * Backend: Python, Django
  * Database: SQL
  
-### Project Management/Collaboration Tools
+### PROJECT MANAGEMENT/COLLABORATION TOOLS
  * GitHub
  * Google Doc/Slides
  * Trello (see burndown, task allocation and estimated dates for completion of all associated tasks: https://trello.com/b/PzPFRTuv/ist303-finalists)
@@ -103,3 +103,6 @@ by realistic data or inferred by real data.
 * Query on what indexes will be used was brought up to offset implied or direct bias.
 * Further exploration on how ranking (1 through 5 versus most importnat to least important, etc.) should be set to ensure
   the recommendations provided by the search is not too restrictive.
+  
+### MEETINGS
+Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
