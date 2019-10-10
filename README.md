@@ -24,69 +24,34 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
 * Phillip - Web Developer
 
 ### STAKEHOLDERS
- * People who are looking for a place to live
- * Landloards and proerty owners
- * Real estate agents/professionals
+* People who are looking for a place to live
+* Landloards and proerty owners
+* Real estate agents/professionals
 
 ### USER STORIES
- * Milestone 1(1)/(~ 2 weeks) 
-   * Any user should be able to search by location and property features only
-      * TASKS: 
-         * Create and publish webpage UI Design requirements.
-         * Create and publish UI design of associated webpages.
-         * Source data for use in development.
-         * Test and run simple queries in Django. Develop back-end code for associated webpages.
-         * Look into database structure to house source data.
- * Milestone 1(2) /(~2 weeks)
-   * Any user would be able to input their preference parameters when they open the web app as an added feature 
-      * TASKS: 
-         * Create and publish webpage UI Design requirements as needed.
-         * Create and publish UI design of associated webpages.
-         * Source data for use in development as needed.
-         * Build database structure and have data for use.
-         * Test and run simple queries in Django. Develop back-end code for associated webpages.
- * Milestone 1.5(3)/(~ 2 weeks)
-   * A registered user is able to save listings, contact housing hosts and access other web features on the web pages
-      * TASKS: 
-         * Create and publish webpage UI Design requirements as needed.
-         * Create and publish UI design of associated webpages.
-         * Build database structure and have data for use.
-         * Test and run simple queries in Django. 
-         * Develop back-end code for associated webpages and test codes.
- * Milestone 2(4)/(~1.5 weeks)
-   * A user can make a change to their preferences without starting over
-      * TASKS: 
-         * Create and publish webpage UI Design requirements as needed 
-         * Maintain and address any database issues.
-         * Develop back-end code for associated webpage. Test codes.
- * Milestone 2(5)/(~1.5 weeks)
-   * A user can see both a map view and text listings of search results
-      * TASKS: 
-         * Create and publish webpage UI Design requirements as needed 
-         * Maintain and address any database issues.
-         * Develop back-end code for associated webpage. Test codes.
- * Milestone 2(6)/(~1.5 weeks) 
-   * A user should be able to sort the listings based on their personalized rankings preference
-      * TASKS: 
-         * Develop back-end code for associated webpage. Test codes.
-         * Conduct sample user testing among team members.
-
+* Any user should be able to search by location and property features only
+* Any user would be able to input their preference parameters when they open the web app as an added feature 
+* A registered user is able to save listings, contact housing hosts and access other web features on the web pages
+* A user can make a change to their preferences without starting over
+* A user can see both a map view and text listings of search results
+* A user should be able to sort the listings based on their personalized rankings preference
+   
 ### TECHNOLOGY
- * Frontend: HTML, CSS, JavaScript
- * Backend: Python, Django
- * Database: SQL
+* Frontend: HTML, CSS, JavaScript
+* Backend: Python, Django
+* Database: SQL
  
 ### PROJECT MANAGEMENT/COLLABORATION TOOLS
- * GitHub
- * Google Doc/Slides
- * Trello (see burndown, task allocation and estimated dates for completion of all associated tasks: https://trello.com/b/PzPFRTuv/ist303-finalists)
+* GitHub
+* Google Doc/Slides
+* Trello https://trello.com/b/PzPFRTuv/ist303-finalists)
  
 ### PARAMETERS WE COLLECT FROM USERS
- * Distance to certain places, areas, etc...
- * Price Preference
- * Safety Level Preference
- * Purpose: Sell, rent, or buy?
- * Location
+* Distance to certain places, areas, etc...
+* Price Preference
+* Safety Level Preference
+* Purpose: Sell, rent, or buy?
+* Location
 
 ### PROJECT REQUIREMENTS:
 User stories will be drafted and appropriately scheduled in order to organize related activities throughout
@@ -103,6 +68,9 @@ by realistic data or inferred by real data.
 * Query on what indexes will be used was brought up to offset implied or direct bias.
 * Further exploration on how ranking (1 through 5 versus most importnat to least important, etc.) should be set to ensure
   the recommendations provided by the search is not too restrictive.
+
+### PROJECT STATUS TRACKING (W/ BURNDOWN CHART)
+See Project Hours Tracking.xlsx 
   
-### MEETINGS
+### TEAM MEETING NOTES
 Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
