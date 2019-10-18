@@ -8,6 +8,7 @@ Data Sources will be derived from available crime statistics, school performance
 
 ### Crime Statistics Must Have:
 *Type of incident (i.e. major crime, robbery, theft, assualt, etc.)
+*Short description of the incident
 *Number of incidents 
 *Time/Data Stamped (i.e. when the data itself was recorded or uploaded for use)
 *City, county, and state specific (in our case, it will be city of Los Angeles, county of Los Angeles, state of California)
@@ -22,6 +23,7 @@ Data Sources will be derived from available crime statistics, school performance
 *Name of the school
 *Grades in the school (i.e. K-12, K-6, K-8, etc.)
 *The most recently published school performance scores(literature, math, etc.)
+*Short description of what the performance score means
 *City, county, and state specific (in our case, it will be city of Los Angeles, county of Los Angeles, state of California)
 
 ### How ratings will be determined on the back-end
