@@ -1,0 +1,30 @@
+# DATA SOURCE REQUIREMENTS
+### Goal
+The goal of the data sources used for this project is to ensure that there is reliable data that is consistent in regards to key filters (address attributes like zip, street address, or city name) in order to have different dataset queries result in dynamic results based on the User's submission in the UI (defined as the person ho is entering filter slections on the UI).
+Data Sources will be derived from available crime statistics, school performance scores (https://www.cde.ca.gov/ds/sp/), and recreation areas (google maps).
+
+### ALL DATA SOURCE MUST HAVE:
+*Something that ties the data record to an address element (i.e. street address, city, zip)
+
+### Crime Statistics Must Have:
+*Type of incident (i.e. major crime, robbery, theft, assualt, etc.)
+*Short description of the incident
+*Number of incidents 
+*Time/Data Stamped (i.e. when the data itself was recorded or uploaded for use)
+*City, county, and state specific (in our case, it will be city of Los Angeles, county of Los Angeles, state of California)
+
+### Recreation Area Must Have:
+*An image of the recreation area (can be pulled from the recreation area website if there is one)
+*The name of the recreation area
+*An address for the recreation area
+*A short description of the recreation describing what the recreation area is
+
+### School Performance Scores Must Have:
+*Name of the school
+*Grades in the school (i.e. K-12, K-6, K-8, etc.)
+*The most recently published school performance scores(literature, math, etc.)
+*Short description of what the performance score means
+*City, county, and state specific (in our case, it will be city of Los Angeles, county of Los Angeles, state of California)
+
+### How ratings will be determined on the back-end
+To be continued

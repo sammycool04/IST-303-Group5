@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'house.apps.HouseConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'Worksample.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'finallistdb',
+        'USER':'postgres',
+        'PASSWORD':'finallist19',
+        'HOST':'localhost',
+        'PORT':'5433',
     }
 }
 
@@ -119,6 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static1")
 
@@ -129,3 +135,8 @@ STATICFILES_DIRS = (
 if __name__=='__main__':
     print(os.getcwd())
     print(BASE_DIR)
+=======
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+>>>>>>> 677bd336da0d1ae9e370afd10d81ff1c6b36579c
