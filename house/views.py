@@ -6,3 +6,6 @@ from .models import House
 def house(request):
     house = House.objects
     return render(request, 'house/home.html', {'house': house})
+
+def BootstrapFilterView(request):
+    return render(request, 'bootstrap_form.html', {})
