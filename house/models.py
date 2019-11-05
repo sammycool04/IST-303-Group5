@@ -16,6 +16,7 @@ class Category(models.Model):
 class House(models.Model):
     image = models.ImageField(upload_to='images/')
     summary = models.CharField(max_length = 200)
+    # location = models.CharField(max_length = 200)
     # host = models.ForeignKey(Host, on_delete=models.CASCADE)
     # categories = models.ManyToManyField(Category)
     # publish_date = models.DateTimeField(auto_now_add = True)

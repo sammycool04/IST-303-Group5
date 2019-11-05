@@ -128,8 +128,8 @@
     {% for house in queryset %}
       <img class = "card=img-top" src="{{ house.image.url }}" height = 200, width = 200/>
 
-      <li>{{ house.summary }}</li>
-      <hr />
+      {{ house.summary }}
+      <!-- <hr /> -->
     {% endfor %}
   </ul>
 </div>
