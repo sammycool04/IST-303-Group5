@@ -1,0 +1,199 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search by Address</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .input-group.md-form.form-sm.form-1 input{
+            border: 1px solid #bdbdbd;
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+        }
+        .input-group.md-form.form-sm.form-2 input {
+            border: 1px solid #bdbdbd;
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+        }
+        .input-group.md-form.form-sm.form-2 input.red-border {
+            border: 1px solid #ef9a9a;
+        }
+        .input-group.md-form.form-sm.form-2 input.lime-border {
+            border: 1px solid #cddc39;
+        }
+        .input-group.md-form.form-sm.form-2 input.amber-border {
+            border: 1px solid #ffca28;
+        }
+
+
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;text-anchor: middle;-webkit-user-select: none;
+            -moz-user-select: none;-ms-user-select: none;user-select: none;
+        }
+        @media (min-width: 768px) {  .bd-placeholder-img-lg {font-size: 3.5rem;}  }
+    </style>
+
+  <!-- Custom styles for this template -->
+  {#    <link href="album.css" rel="stylesheet">#}
+
+</head>
+
+<body style="background-color: #eeeeee">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">FinalLists</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item active">
+            <a class="nav-link" href="searchByAdd.html">Search by Address <span class="sr-only"></span> </a></li>
+          <li class="nav-item active">
+            <a class="nav-link" href="searchByPre.html">Search by Preferences <span class="sr-only"></span> </a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign In</a></li>
+        </ul>
+
+
+        <form class="form-inline my-2 my-lg-0" >
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+
+      <div class="container form-sm form-2 pl-0" style="margin-top: 10%;margin-bottom: 10%;width: 100%;">
+          <form id="searchBar" class="form-inline md-form mr-auto mb-4" action="#" method="get" style="margin: auto">
+              <input id="sa" name="sa" class="form-control mr-sm-1" type="text" placeholder="Search" aria-label="Search" style="width: 90%;">
+              <button class="btn btn-primary aqua-gradient btn-sm my-0" type="submit">Search</button>
+          </form>
+      </div>
+
+
+
+
+      <div class="container" id="resultDiv" style="display:none;margin-top: 10%;">
+          <div class="container card" id="searchResults"></div>
+
+
+
+
+
+      </div>
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+{#    <div class="container" style="margin: 10%;">#}
+{#        <button id="bt1">click</button><div id="a1" style="background-color: red"><p id="a2">3  </p></div></div>#}
+
+
+
+{#    <form action="getName" method="get" style="margin-top: 10%;">#}
+{#        <label for="your_name">Your name: </label>#}
+{#        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">#}
+{#        <input type="submit" value="OK">#}
+{#    </form>#}
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    {#window.onload = function() {$.get("getName", {'gf': ""}, function(resultData){handleSearchQuery(resultData);});};#}
+
+    {#let mlElement = $("#a1");#}
+    let searchB = $("#searchBar");
+    let searchR = $("#searchResults");
+    searchB.submit( function (event) {
+
+        event.preventDefault();
+        submitSearchForm(event);
+    });
+
+    function submitSearchForm(formSubmitEvent) {
+        let searchQuery = $("#searchBar").serialize();
+        $.get("sbAdd", searchQuery, function(resultData){handleSearchQuery(resultData);});
+    }
+
+    function handleSearchQuery(resultData) {
+        $("#resultDiv").show();
+        searchR.html("");
+
+        console.log(resultData.length);console.log(resultData);
+
+
+        {#let data = JSON.parse(resultData);#}
+        {#console.log("getForm: ");console.log(resultData);console.log("json data: ");console.log(data);#}
+        let rowEntry = '<div class="container>';
+        if(resultData.length === 0){
+            console.log("is oo");
+            rowEntry += '<div class="card" style="margin:5%;padding:5%;width:80%;"><p>Sorry. We currently do not have any house data in the area</p></div></div>';
+            searchR.append(rowEntry);
+        }
+        else{
+            for (let i = 0; i < resultData.length; i++) {
+                rowEntry += '<div class="card" style="margin-top:10%;width:90%;">';
+                rowEntry += '<div class="card"><img src="' + resultData[i]['image'] + '" style="width:400px;height:300px;">' + '</div>';
+                rowEntry += '<div>' + 'Address: ' + resultData[i]['address'] + '</div>';
+                rowEntry += '<div>' + 'Price:   ' + resultData[i]['price'] + '</div>';
+                rowEntry += '<div>' + 'Summary: ' + resultData[i]['summary'] + '</div>';
+                rowEntry += '<div>' + 'For ' + resultData[i]['categories'] + '</div>';
+                rowEntry += '</div>';
+            }
+            rowEntry += '</div>';
+            searchR.append(rowEntry);
+        }
+
+        return resultData;
+    }
+
+
+
+    {#$("#bt1").click(function (a) { alert("click"); });#}
+
+</script>
+
+
+</html>
