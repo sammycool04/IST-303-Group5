@@ -89,13 +89,14 @@ WSGI_APPLICATION = 'Worksample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
-        'USER':'Phillip',
-        'PASSWORD':'',
-        'HOST':'127.0.0.1',
-        'PORT':'5432',
+        'NAME': 'finallistdb',
+        'USER':'postgres',
+        'PASSWORD':'finallist19',
+        'HOST':'localhost',
+        'PORT':'5433',
     }
 }
+
 
 
 
