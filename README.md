@@ -79,14 +79,15 @@ Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
 * Git clone the project
 * CD to the project folder
 * Since we are using Postgresql at this moment, you will also have to set up your local database first:
-   Download Postgres from https://www.postgresql.org/
-Open Postgres app and click “initialize” to create the first database
-The first database should be selected automatically on the app, and double click it to open a terminal 
-In the terminal, type ‘password postgres’ to create your own password
-Type CREATE DATABASE (a name you want), for example, CREATE DATABASE finalLists 
+   -Download Postgres from https://www.postgresql.org/
+   -Open Postgres app and click “initialize” to create the first database
+   -The first database should be selected automatically on the app, and double click it to open a terminal 
+   -In the terminal, type ‘password postgres’ to create your own password
+   -Type CREATE DATABASE (a name you want), for example, CREATE DATABASE finalLists 
+   -Go to settings.py file under Worksample:
+   -Find the DATABASE setting, and change it  to something like:
 
-Go to settings.py file under Worksample:
-Find the DATABASE setting, and change it  to something like:
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -97,6 +98,8 @@ DATABASES = {
         'PORT’:’(open postgres, click Server Setting to check your port number)’,
     }
 }
+```
+
 * Save the change
 * In the terminal, type “python manage.py runserver”
 
