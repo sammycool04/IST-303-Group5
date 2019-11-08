@@ -103,3 +103,15 @@ DATABASES = {
 * Save the change
 * In the terminal, type “python manage.py runserver”
 
+### TESTING:
+* We use pytest-django and mixer for our testing
+- In your terminal, type:
+```
+pip install pytest-django
+pip install mixer
+```
+* Remember to keep your Postgres database running. In your terminal, type:
+```
+pytest
+```
+
