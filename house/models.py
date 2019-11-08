@@ -35,9 +35,9 @@ class House(models.Model):
 #     # reviewed = models.BooleanField(default=False)
 #     # def __str__(self):
 #     #     return self.summary
-    @property
-    def is_valid(self):
-        return self.price > 0.0
+    # @property
+    # def is_valid(self):
+    #     return self.price > 0.0
 
 
 
@@ -48,6 +48,10 @@ class HouseInfo(models.Model):
     price = models.FloatField(default=0.0)
     categories = models.CharField(max_length=200, default='')
     summary = models.CharField(max_length=200, default='')
+
+    @property
+    def is_valid(self):
+        return self.price > 0.0
 
     class Meta():
         managed: True

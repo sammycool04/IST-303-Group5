@@ -5,9 +5,9 @@ import pytest
 class TestModels:
 
     def test_house_is_valid(self):
-        house = mixer.blend('house.House', price = 100)
+        house = mixer.blend('house.HouseInfo', price = 100)
         assert house.is_valid == True
 
     def test_house_is_not_valid(self):
-        house = mixer.blend('house.House', price = 0)
+        house = mixer.blend('house.HouseInfo', price = 0)
         assert house.is_valid == False
