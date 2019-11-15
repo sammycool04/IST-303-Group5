@@ -70,7 +70,7 @@ by realistic data or inferred by real data.
   the recommendations provided by the search is not too restrictive.
 
 ### PROJECT STATUS TRACKING (W/ BURNDOWN CHART)
-See Project Hours Tracking.xlsx 
+See https://github.com/sammycool04/IST-303-Group5/blob/master/Project%20Hours%20Tracking.xlsx
   
 ### TEAM MEETING NOTES
 Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
