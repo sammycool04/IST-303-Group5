@@ -75,27 +75,49 @@ WSGI_APPLICATION = 'Worksample.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'FinalLists',
+        'USER': 'fianllists@finallistsdb',
+        'PASSWORD': 'Finallists2019@',
+        'HOST': 'finallistsdb.database.windows.net',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        }
+    }
+}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'sql_server.pyodbc',
+#         'NAME': 'singledb',
+#         'USER': 'phillip@perserver',
+#         'PASSWORD': 'tuSDAY2778',
+#         'HOST': 'perserver.database.windows.net',
+#         'PORT': '',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         }
+#     }
+# }
+
+
+DATABASE_CONNECTION_POOLING = False
+
+#
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'mydb',
-#         'USER':'mydbuser',
-#         'PASSWORD':'mypass',
-#         'HOST':'127.0.0.1',
-#         'PORT':'5432',
+#         'USER': 'Phillip',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
 #     }
 # }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
-        'USER':'Phillip',
-        'PASSWORD':'',
-        'HOST':'127.0.0.1',
-        'PORT':'5432',
-    }
-}
 
 
 

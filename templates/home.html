@@ -39,7 +39,7 @@
 
 
 <body>
-  <header>
+  <header  class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">FinalLists</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -49,16 +49,20 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item active">
-            <a class="nav-link" href="searchByAdd.html">Search by Address <span class="sr-only"></span> </a></li>
-          <li class="nav-item active">
-            <a class="nav-link" href="searchByPre.html">Search by Preferences <span class="sr-only"></span> </a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign In</a></li>
+            <li class="nav-item active">
+                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active">
+                <a class="nav-link" href="searchByAdd.html">Search by Address <span class="sr-only"></span> </a></li>
+            <li class="nav-item active">
+                <a class="nav-link" href="searchByPre.html">Search by Preferences <span class="sr-only"></span> </a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign In</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="survey.html">Survey</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="map.html">Map</a></li>
         </ul>
 
 
@@ -90,14 +94,14 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-{#              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"#}
-{#                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">#}
-                <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/> -->
-                <!-- <image xlink:href="https://construkt.nz/wp-content/uploads/Hobsonville_12-600x320.jpg", height="225px" width="348px"/> -->
-                <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                {% load static %}
-                <img src="{% static '/imgs/img1.jpg' %}" alt="My image" style="height: 225px; width: 348px;">
+              {#              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"#}
+              {#                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">#}
+              <title>Placeholder</title>
+              <!-- <rect width="100%" height="100%" fill="#55595c"/> -->
+              <!-- <image xlink:href="https://construkt.nz/wp-content/uploads/Hobsonville_12-600x320.jpg", height="225px" width="348px"/> -->
+              <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
+              {% load static %}
+              <img src="{% static '/imgs/img1.jpg' %}" alt="My image" style="height: 225px; width: 348px;">
 
               </svg>
               <div class="card-body">
@@ -118,7 +122,7 @@
                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                 <title>Placeholder</title>
                 <!-- <rect width="100%" height="100%" fill="#55595c"/> -->
-                <image xlink:href="https://media.gettyimages.com/photos/new-homes-picture-id123727292?s=2048x2048" ,
+                <image xlink:href="https://media.gettyimages.com/photos/new-homes-picture-id123727292?s=2048x2048"
                   height="225px" width="348px" />
                 <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
               </svg>
@@ -140,18 +144,19 @@
                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                 <!-- <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
               <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <image xlink:href="http://optionscl.org/wp-content/uploads/2016/05/ATC-Housing-services.jpg" ,
+                <image xlink:href="http://optionscl.org/wp-content/uploads/2016/05/ATC-Housing-services.jpg"
                   height="225px" width="348px" />
-                <div class="card-body">
-                  <p class="card-text">Country houses with great conditions</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">Country houses with great conditions</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
+                  <small class="text-muted">9 mins</small>
                 </div>
+              </div>
             </div>
           </div>
 

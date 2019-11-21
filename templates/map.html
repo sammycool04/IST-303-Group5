@@ -4,19 +4,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Search by Preferences</title>
+    <title>Title</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-
+{#    <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/themes/light/main.css">#}
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <style>
         .input-group.md-form.form-sm.form-1 input{
@@ -38,22 +38,18 @@
         .input-group.md-form.form-sm.form-2 input.amber-border {
             border: 1px solid #ffca28;
         }
-
-
-
-        .bd-placeholder-img {
-            font-size: 1.125rem;text-anchor: middle;-webkit-user-select: none;
-            -moz-user-select: none;-ms-user-select: none;user-select: none;
-        }
         @media (min-width: 768px) {  .bd-placeholder-img-lg {font-size: 3.5rem;}  }
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 97%;
+            width: 100%;
+        }
     </style>
 
-  <!-- Custom styles for this template -->
-  {#    <link href="album.css" rel="stylesheet">#}
 
 </head>
-
-<body style="background-color: #eeeeee">
+<body>
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">FinalLists</a>
@@ -81,54 +77,18 @@
         </ul>
 
 
-        <form class="form-inline my-2 my-lg-0">
+
+        <form class="form-inline my-2 my-lg-0" >
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-
 
       </div>
     </nav>
   </header>
 
-  <main role="main">
 
-      <div class="container form-sm form-2 pl-0" style="margin-top: 10%;margin-bottom: 10%;">
-          <form id="searchBar" class="form-inline md-form mr-auto mb-4" action="#" method="get">
-              <div style="width: 100%;margin: 10px;">
-                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 70%;">
-                  <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-              </div>
-
-              <div class="form-group" style="margin: 10px;">
-                  <label for="select1">Example select</label>
-                  <select class="form-control" id="select1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                </select>
-              </div>
-
-
-          </form>
-      </div>
-
-
-
-
-      <div class="container" id="resultDiv" style="display:none;margin-top: 10%;">
-          <div class="container card" id="searchResults"></div>
-
-
-
-
-
-      </div>
-
-
-  </main>
+  <div id="viewDiv"></div>
 
 
 
@@ -148,12 +108,11 @@
 
 
 </body>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script src="https://js.arcgis.com/4.13/"></script>
+<script src="static/js1/map.js"></script>
+
 <script>
-    window.onload = function() {$.get("getName", {'gf': ""}, function(resultData){handleSearchQuery(resultData);});};
-
-
-    $("#bt1").click(function (a) { alert("click"); });
 
 </script>
 

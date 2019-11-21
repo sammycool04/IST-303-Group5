@@ -8,6 +8,8 @@ from django.core import serializers
 
 import operator
 
+from house.models import HouseInfo
+
 
 def homepage(request):
     return render(request, 'home.html')
@@ -24,11 +26,21 @@ def searchByAdd(request):
 def searchByPre(request):
     return render(request, 'searchByPre.html')
 
+def survey(request):
+    return render(request, 'survey.html')
 
-#
+def zillow(request):
+    return render(request, 'zillow.html')
+
+def showMap(request):
+    return render(request, 'map.html')
+
+
+
+# .................................................................
+
 def getForm(request):
     reqDict = request.GET.dict()
-    # reqDict = request.GET.get('')
     print(reqDict)
 
     return render(request, 'searchByAdd.html', {'d1': 'abcde'})
@@ -48,8 +60,7 @@ def searchByAddResult(request):
                 retDic.append(dic)
         return JsonResponse(retDic, safe=False)
 
-        # if rec.lower().strip() == 'claremont':
-        #     return house_data()
+
     return JsonResponse([], safe=False)
 
     # if this is a POST request we need to process the form data
@@ -72,13 +83,18 @@ def searchByAddResult(request):
     # return HttpResponse(request.GET.items())
 
 
+
+
+
+
 def house_data():
     houseData = [
         {
             "id": 1,
             "image": "https://photos.zillowstatic.com/cc_ft_1536/IS7uq68u3lahf81000000000.webp",
             "address": "1428 Oxford Ave, Claremont, CA 91711",
-            "location": "0.0,0.0",
+            "longitude": "0.0",
+            "latitude": "0.0",
             "price": 850000,
             "categories": "sale",
             "summary": "Beautifully renovated light and bright 6 bedroom 3 bathroom home. Features include gleaming new kitchen with new white cabinets, quartz countertops, and stainless steel appliances. Couple that with sparkling new bathrooms, recessed lighting, laminate wood floors, two car garage and large lot and this is the ideal place to call home."
@@ -87,7 +103,8 @@ def house_data():
             "id": 2,
             "image": "https://photos.zillowstatic.com/cc_ft_1536/ISr1amln7zh79z0000000000.webp",
             "address": "3419 Campus Ave, Claremont, CA 91711",
-            "location": "0.0,0.0",
+            "longitude": "0.0",
+            "latitude": "0.0",
             "price": 589500,
             "categories": "sale",
             "summary": "The updated kitchen with granite counters and stainless-steel appliances offers room for a kitchen table, or additional counter space and storage."
@@ -96,7 +113,8 @@ def house_data():
             "id": 3,
             "image": "https://photos.zillowstatic.com/fp/b519e881de2c699c1166a62686fa1d6f-cc_ft_1536.webp",
             "address": "1268 Hillsdale Dr, Claremont, CA 91711",
-            "location": "0.0,0.0",
+            "longitude": "0.0",
+            "latitude": "0.0",
             "price": 665000,
             "categories": "sale",
             "summary": "Well maintained Single family home located in the heart of Claremont. This Beautiful 1 Story Home features 4 BEDROOMS and 2 BATHS. 2,010 Living SF. and 11,725 sf. Lot Size"
@@ -105,7 +123,8 @@ def house_data():
             "id": 4,
             "image": "https://photos.zillowstatic.com/cc_ft_1536/ISbdw6gxabi1o61000000000.webp",
             "address": "118 Bloom Dr, Claremont, CA 91711",
-            "location": "0.0,0.0",
+            "longitude": "0.0",
+            "latitude": "0.0",
             "price": 464000,
             "categories": "sale",
             "summary": "Investor and homebuyer opportunity! This property is being offered at a live auction on 01-02-2020. Buy it as an investment or enjoy it as your own home."
@@ -114,7 +133,8 @@ def house_data():
             "id": 5,
             "image": "https://photos.zillowstatic.com/cc_ft_1536/IS7azz04x1ojsn1000000000.webp",
             "address": "214 E College Way, Claremont, CA 91711",
-            "location": "0.0,0.0",
+            "longitude": "0.0",
+            "latitude": "0.0",
             "price": 684900,
             "categories": "sale",
             "summary": "If you are looking for that perfect Mid-Century home, this is the one you have been waiting for. Don't miss this opportunity to own a home located in the Piedmont Mesa area! This home has an original mural from the prestigious Henderson builder. "
@@ -123,11 +143,42 @@ def house_data():
             "id": 6,
             "image": "https://photos.zillowstatic.com/fp/c9d6a3aebdb81f21577805327b5fc251-cc_ft_1536.webp",
             "address": "2531 N Mountain Ave, Claremont, CA 91711",
-            "location": "0.0,0.0",
+            "longitude": "0.0",
+            "latitude": "0.0",
             "price": 1080000,
             "categories": "sale",
             "summary": "This custom built mid century modern home, located in the prestigious hillside community of Claraboya, truly has everything for today's discerning buyer. "
+        },
+        {
+            "id": 7,
+            "image": "https://photos.zillowstatic.com/cc_ft_1536/ISjz2ddoe3cqbw0000000000.webp",
+            "address": "2384 2nd St, La Verne, CA 91750",
+            "longitude": "0.0",
+            "latitude": "0.0",
+            "price": 619000,
+            "categories": "sale",
+            "summary": "Located in the sought-after neighborhood of Old Town La Verne, this beautiful 1901 Craftsman home on a corner lot has been lovingly maintained and is now available."
+        },
+        {
+            "id": 8,
+            "image": "https://photos.zillowstatic.com/fp/f62d6d27c29e98b219460b855b53d086-cc_ft_1536.webp",
+            "address": "809 Arbor Cir, La Verne, CA 91750",
+            "location": "0.0,0.0",
+            "price": 550000,
+            "categories": "sale",
+            "summary": "Your holiday home awaits! Welcome to this pristine 3-bedroom, 2-bath turnkey home located in the exclusive gated community of Park La Verne!"
+        },
+        {
+            "id": 9,
+            "image": "https://photos.zillowstatic.com/fp/db018c138c2ffea19bf42876905616b8-uncropped_scaled_within_1536_1152.webp",
+            "address": "714 W Carter Dr, Glendora, CA 91740",
+            "longitude": "0.0",
+            "latitude": "0.0",
+            "price": 545000,
+            "categories": "sale",
+            "summary": "HUGE PRICE REDUCTION! TAKE A LOOK BEFORE IT'S TOO LATE! Beautiful pool home located in a quiet, family oriented neighborhood! This single story home has original wood flooring and has new paint throughout."
         }
+
     ]
 
     # return JsonResponse(houseData, safe=False)
@@ -138,3 +189,8 @@ if __name__ == '__main__':
     dsa = house_data()
     for di in dsa:
         print('claremont' in di['address'].lower())
+
+
+    # insertData('')
+
+    print('\n\nend')

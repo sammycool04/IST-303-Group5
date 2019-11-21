@@ -3,16 +3,11 @@ from . import views
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-import house.views
-from house.views import BootstrapFilterView
+import house.views as vw
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # path('', house.views.house, name = 'house'),
-    # path('home.html', views.homepage, name = 'home'),
-    # path('', BootstrapFilterView, name = 'bootstrap'),
-
 
     path('', views.homepage, name='homepg'),
     path('home.html', views.homepage, name='homepg'),
@@ -20,13 +15,23 @@ urlpatterns = [
 
     path('searchByAdd.html', views.searchByAdd, name='searchByAdd'),
     path('searchByPre.html', views.searchByPre, name='searchByPre'),
+    path('survey.html', views.survey, name='survey'),
+    path('map.html', views.showMap, name='showmap'),
+
 
     path('sbAdd', views.searchByAddResult, name='sbAdd'),
     path('sbPre', views.searchByPreResult, name='sbPre'),
 
+    path('insertData', vw.insertData, name='insertD'),
 
-    path('bootstrap_form.html', BootstrapFilterView, name='Bootstrapform')
 
+
+
+
+    # ..............................................................
+
+    path('zillow.html', views.zillow, name='zillow'),
+    path('bootstrap_form.html', vw.BootstrapFilterView, name='Bootstrapform')
 
 
     # path('getForm', views.getForm, name='getForms')
