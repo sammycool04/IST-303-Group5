@@ -70,7 +70,48 @@ by realistic data or inferred by real data.
   the recommendations provided by the search is not too restrictive.
 
 ### PROJECT STATUS TRACKING (W/ BURNDOWN CHART)
-See Project Hours Tracking.xlsx 
+See https://github.com/sammycool04/IST-303-Group5/blob/master/Project%20Hours%20Tracking.xlsx
   
 ### TEAM MEETING NOTES
 Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
+
+### To Run the Application:
+* Git clone the project
+* CD to the project folder
+* Since we are using Postgresql at this moment, you will also have to set up your local database first:
+   - Download Postgres from https://www.postgresql.org/
+   - Open Postgres app and click “initialize” to create the first database
+   - The first database should be selected automatically on the app, and double click it to open a terminal 
+   - In the terminal, type ‘password postgres’ to create your own password
+   - Type CREATE DATABASE (a name you want), for example, CREATE DATABASE finalLists 
+   - Go to settings.py file under Worksample:
+   - Find the DATABASE setting, and change it  to something like:
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': ‘(the database name you just created)’,
+        'USER':'postgres',
+        'PASSWORD’:’(the password you just created)’,
+        'HOST':'localhost',
+        'PORT’:’(open postgres, click Server Setting to check your port number)’,
+    }
+}
+```
+
+* Save the change
+* In the terminal, type “python manage.py runserver”
+
+### TESTING:
+* We use pytest-django and mixer for our testing
+- In your terminal, type:
+```
+pip install pytest-django
+pip install mixer
+```
+* Remember to keep your Postgres database running. In your terminal, type:
+```
+pytest
+```
+
