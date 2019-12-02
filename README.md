@@ -75,38 +75,84 @@ See https://github.com/sammycool04/IST-303-Group5/blob/master/Project%20Hours%20
 ### TEAM MEETING NOTES
 Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
 
+
 ### To Run the Application:
-* Git clone the project
-* CD to the project folder
-* Since we are using Postgresql at this moment, you will also have to set up your local database first:
-   - Download Postgres from https://www.postgresql.org/
-   - Open Postgres app and click “initialize” to create the first database
-   - The first database should be selected automatically on the app, and double click it to open a terminal 
-   - In the terminal, type ‘password postgres’ to create your own password
-   - Type CREATE DATABASE (a name you want), for example, CREATE DATABASE finalLists 
-   - Go to settings.py file under Worksample:
-   - Find the DATABASE setting, and change it  to something like:
+1. Install Python 3
+    - On macOS using Homebrew:
+    ```shell script
+     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+     brew install python
+    ```
+    - On Linux:
+    ```shell script
+     sudo apt-get install python3
+    ```
+    - On Windows, download & install from link:
+    https://www.python.org/downloads/windows/
+    
 
-```
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': ‘(the database name you just created)’,
-        'USER':'postgres',
-        'PASSWORD’:’(the password you just created)’,
-        'HOST':'localhost',
-        'PORT’:’(open postgres, click Server Setting to check your port number)’,
-    }
-}
-```
+2. Install Microsoft ODBC driver for SQL Server ( for project's database)
+    - macOS:
+    ```shell script
+     brew install msodbcsql17 mssql-tools
+    ```
+    - Linux (Ubuntu 19 as example)
+    ```shell script
+     #Ubuntu 19.04
+     curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+     exit
+     sudo apt-get update
+     sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+     # optional: for bcp and sqlcmd
+     sudo ACCEPT_EULA=Y apt-get install mssql-tools
+     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+     source ~/.bashrc
+     
+    ```
+    
+    - Windows, download & install from link:
+	https://www.microsoft.com/en-us/download/details.aspx?id=56567
 
-* Save the change
-* In the terminal, type “python manage.py runserver”
+3. Install Python Virtual Environment
+    - Windows:
+    ```shell script
+     python3 -m pip install virtualenv
+    ```
+    - non-Windows:
+    ```shell script
+     python3 -m pip install --user virtualenv
+    ```
+
+4. Create & activate virtual environment (named env)
+    ```shell script
+     python3 -m venv /path/to/new/virtual/environment/env
+     source env/bin/activate
+    ```
+
+5. Clone the project inside virtual environment
+	git clone git@github.com:sammycool04/IST-303-Group5.git
+
+6. cd to the project folder & install required python packages
+    ```shell script
+     cd IST-303-Group5
+     python -m pip install -r requirements.txt
+    ```
+
+7. Start the project
+    ```shell script
+     python manage.py runserver
+    ```
+8. To access the web app, open your web browser, enter: 
+    [127.0.0.1:8000](127.0.0.1:8000 "Finalists")
+	
+
+
 
 ### TESTING:
 * We use pytest-django and mixer for our testing
-- In your terminal, type:
-```
+- If you haven't installed the packages, in your terminal, type:
+```shell script
 pip install pytest-django
 pip install mixer
 ```
