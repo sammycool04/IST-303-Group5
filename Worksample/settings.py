@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import pyodbc
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -72,9 +73,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Worksample.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 
 
 DATABASES = {
@@ -82,7 +80,7 @@ DATABASES = {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'FinalLists',
         'USER': 'fianllists@finallistsdb',
-        'PASSWORD': 'Finallists2019@',
+        'PASSWORD': 'listfinal2019@',
         'HOST': 'finallistsdb.database.windows.net',
         'PORT': '',
         'OPTIONS': {
@@ -90,6 +88,7 @@ DATABASES = {
         }
     }
 }
+
 
 # DATABASES = {
 #     'default': {

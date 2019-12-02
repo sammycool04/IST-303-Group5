@@ -12,6 +12,7 @@ urlpatterns = [
     path('', views.homepage, name='homepg'),
     path('home.html', views.homepage, name='homepg'),
     path('signup.html', views.signup, name='signup'),
+    path('signin.html', views.signin, name='signin'),
 
     path('searchByAdd.html', views.searchByAdd, name='searchByAdd'),
     path('searchByPre.html', views.searchByPre, name='searchByPre'),
