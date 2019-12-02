@@ -98,8 +98,8 @@ Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
     ```
     - Linux (Ubuntu 19 as example)
     ```shell script
-     #Ubuntu 19.04
-     curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+     #Ubuntu 18.04
+     curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
      exit
      sudo apt-get update
      sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -108,9 +108,7 @@ Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
      echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
      echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
      source ~/.bashrc
-     
     ```
-    
     - Windows, download & install from link:
 	https://www.microsoft.com/en-us/download/details.aspx?id=56567
 
