@@ -16,10 +16,12 @@ urlpatterns = [
 
     path('searchByAdd.html', views.searchByAdd, name='searchByAdd'),
     path('searchByPre.html', views.searchByPre, name='searchByPre'),
+    path('houseDetail.html', views.houseDetail, name='houseDetail'),
     path('survey.html', views.survey, name='survey'),
     path('map.html', views.showMap, name='showmap'),
 
 
+    path('sbId', views.searchById, name='sbId'),
     path('sbAdd', views.searchByAddResult, name='sbAdd'),
     path('sbPre', views.searchByPreResult, name='sbPre'),
 

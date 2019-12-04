@@ -24,9 +24,15 @@ def signin(request):
 def searchByAdd(request):
     return render(request, 'searchByAdd.html')
 
-
 def searchByPre(request):
     return render(request, 'searchByPre.html')
+
+def houseDetail(request):
+    return render(request, 'houseDetail.html')
+
+
+def showMap(request):
+    return render(request, 'map.html')
 
 def survey(request):
     return render(request, 'survey.html')
@@ -34,8 +40,6 @@ def survey(request):
 def zillow(request):
     return render(request, 'zillow.html')
 
-def showMap(request):
-    return render(request, 'map.html')
 
 
 
@@ -48,9 +52,22 @@ def getForm(request):
     return render(request, 'searchByAdd.html', {'d1': 'abcde'})
 
 
+
+def searchById(request):
+    hId = request.GET.get('id')
+    # return JsonResponse([hId], safe=False)
+
+    if hId:
+        data = house_data()
+        for dic in data:
+            if int(hId) == dic['id']:
+                return JsonResponse(dic, safe=False)
+    return JsonResponse([], safe=False)
+
+
+
 def searchByPreResult(request):
     pass
-
 
 def searchByAddResult(request):
     rec = request.GET.get('sa')
