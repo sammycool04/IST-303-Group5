@@ -1,4 +1,5 @@
 <!doctype html>
+{%load staticfiles%}
 <html lang="en">
 
 <head>
@@ -29,6 +30,56 @@
         font-size: 3.5rem;
       }
     }
+    {% load static %}
+    section{
+      background-image: url('static/imgs/Slide 1 Background Image.png')
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+/* Style the search field */
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+
+    /* Style the submit button */
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none; /* Prevent double borders */
+      cursor: pointer;
+    }
+
+    form.example button:hover {
+      background: #0b7dda;
+    }
+
+    /* Clear floats */
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* .logo-image{
+     width: 46px;
+     height: 46px;
+     border-radius: 50%;
+     margin-top: -6px;
+   } */
+
 
   </style>
   <!-- Custom styles for this template -->
@@ -42,7 +93,11 @@
 <body>
   <header  class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="home.html">FinalLists</a>
+      {% load static %}
+      <a class="navbar-left" href="home.html"><img src="{%static 'static/imgs/teamlogo.png' %}"/></a>
+      <!-- <div class="logo-image">
+      {% load static %}
+      </div> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,12 +122,6 @@
         </ul>
 
 
-        <!-- <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
-
-
       </div>
     </nav>
   </header>
@@ -81,11 +130,21 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Hello, start exploring here!</h1>
-        <p class="lead text-muted">Here to find your personalized lists!</p>
+        <h1 class="jumbotron-heading">FinalLists</h1>
+        <p class="lead text-muted">It is where you live...</p>
+
+
+
         <p>
           <a href="mailto:boshenfeng@gmail.com" class="btn btn-primary my-2">Email Us Now</a>
         </p>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <form class="example" action="action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
     </section>
 
@@ -98,9 +157,7 @@
               {#              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"#}
               {#                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">#}
               <title>Placeholder</title>
-              <!-- <rect width="100%" height="100%" fill="#55595c"/> -->
-              <!-- <image xlink:href="https://construkt.nz/wp-content/uploads/Hobsonville_12-600x320.jpg", height="225px" width="348px"/> -->
-              <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
+
               {% load static %}
               <img src="{% static '/imgs/img1.jpg' %}" alt="My image" style="height: 225px; width: 348px;">
 
@@ -122,10 +179,8 @@
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                 <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/> -->
                 <image xlink:href="https://media.gettyimages.com/photos/new-homes-picture-id123727292?s=2048x2048"
                   height="225px" width="348px" />
-                <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
               </svg>
               <div class="card-body">
                 <p class="card-text">Super comfortable family rooms!</p>
@@ -143,153 +198,12 @@
             <div class="card mb-4 shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <!-- <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <image xlink:href="http://optionscl.org/wp-content/uploads/2016/05/ATC-Housing-services.jpg"
+                <title>Placeholder</title>
+                <image xlink:href="https://media.gettyimages.com/photos/new-homes-picture-id123727292?s=2048x2048"
                   height="225px" width="348px" />
               </svg>
               <div class="card-body">
-                <p class="card-text">Country houses with great conditions</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                <image xlink:href="http://optionscl.org/wp-content/uploads/2016/05/atc-housing-services-2.jpg" ,
-                  height="225px" width="348px" />
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                <image xlink:href="https://miamiagentmagazine.com/wp-content/uploads/2011/08/AffordableHousing.jpg" ,
-                  height="225px" width="348px" />
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                <image xlink:href="https://miamiagentmagazine.com/wp-content/uploads/2011/08/AffordableHousing.jpg" ,
-                  height="225px" width="348px" />
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <!-- <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                <image xlink:href="https://www.l-housing.com/images/LogoTemp.jpg" , height="225px" width="348px" />
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                <image xlink:href="https://www.blogs.va.gov/VAntage/wp-content/uploads/2018/11/HUD-VSH-HOME.jpg" ,
-                  height="225px" width="348px" />
-
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <!-- <rect width="100%" height="100%" fill="#55595c"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-                <image xlink:href="https://bdmag.com/wp-content/uploads/2019/04/2821-ECR_2.jpg" , height="225px"
-                  width="348px" />
-
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Super comfortable family rooms!</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -308,7 +222,7 @@
 
   <footer class="text-muted">
     <div class="container text-center">
-      <p>©️ Sam Feng {% now "Y" %}</p>
+      <p>©️ FinalLists {% now "Y" %}</p>
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
