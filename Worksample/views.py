@@ -98,6 +98,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 850000,
+            "room": 6,
+            "bath": 3,
+            "size": 2674,
             "categories": "sale",
             "summary": "Beautifully renovated light and bright 6 bedroom 3 bathroom home. Features include gleaming new kitchen with new white cabinets, quartz countertops, and stainless steel appliances. Couple that with sparkling new bathrooms, recessed lighting, laminate wood floors, two car garage and large lot and this is the ideal place to call home."
         },
@@ -108,6 +111,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 589500,
+            "room": 3,
+            "bath": 2,
+            "size": 1177,
             "categories": "sale",
             "summary": "The updated kitchen with granite counters and stainless-steel appliances offers room for a kitchen table, or additional counter space and storage."
         },
@@ -118,6 +124,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 665000,
+            "room": 4,
+            "bath": 2,
+            "size": 2010,
             "categories": "sale",
             "summary": "Well maintained Single family home located in the heart of Claremont. This Beautiful 1 Story Home features 4 BEDROOMS and 2 BATHS. 2,010 Living SF. and 11,725 sf. Lot Size"
         },
@@ -128,6 +137,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 464000,
+            "room": 3,
+            "bath": 3,
+            "size": 1552,
             "categories": "sale",
             "summary": "Investor and homebuyer opportunity! This property is being offered at a live auction on 01-02-2020. Buy it as an investment or enjoy it as your own home."
         },
@@ -138,6 +150,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 684900,
+            "room": 3,
+            "bath": 2,
+            "size": 1942,
             "categories": "sale",
             "summary": "If you are looking for that perfect Mid-Century home, this is the one you have been waiting for. Don't miss this opportunity to own a home located in the Piedmont Mesa area! This home has an original mural from the prestigious Henderson builder. "
         },
@@ -148,6 +163,10 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 1080000,
+            "price": 684900,
+            "room": 3,
+            "bath": 3,
+            "size": 2377,
             "categories": "sale",
             "summary": "This custom built mid century modern home, located in the prestigious hillside community of Claraboya, truly has everything for today's discerning buyer. "
         },
@@ -158,6 +177,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 619000,
+            "room": 3,
+            "bath": 2,
+            "size": 1324,
             "categories": "sale",
             "summary": "Located in the sought-after neighborhood of Old Town La Verne, this beautiful 1901 Craftsman home on a corner lot has been lovingly maintained and is now available."
         },
@@ -167,6 +189,9 @@ def house_data():
             "address": "809 Arbor Cir, La Verne, CA 91750",
             "location": "0.0,0.0",
             "price": 550000,
+            "room": 3,
+            "bath": 2,
+            "size": 1364,
             "categories": "sale",
             "summary": "Your holiday home awaits! Welcome to this pristine 3-bedroom, 2-bath turnkey home located in the exclusive gated community of Park La Verne!"
         },
@@ -177,6 +202,9 @@ def house_data():
             "longitude": "0.0",
             "latitude": "0.0",
             "price": 545000,
+            "room": 4,
+            "bath": 2,
+            "size": 1572,
             "categories": "sale",
             "summary": "HUGE PRICE REDUCTION! TAKE A LOOK BEFORE IT'S TOO LATE! Beautiful pool home located in a quiet, family oriented neighborhood! This single story home has original wood flooring and has new paint throughout."
         }
