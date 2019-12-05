@@ -1,5 +1,7 @@
 <!doctype html>
 {%load staticfiles%}
+{% load static %}
+
 <html lang="en">
 
 <head>
@@ -30,7 +32,6 @@
         font-size: 3.5rem;
       }
     }
-    {% load static %}
     section{
       background-image: url('static/imgs/Slide 1 Background Image.png')
     }
@@ -72,13 +73,10 @@
       clear: both;
       display: table;
     }
+    section{
+      height: 400px;
+    }
 
-    /* .logo-image{
-     width: 46px;
-     height: 46px;
-     border-radius: 50%;
-     margin-top: -6px;
-   } */
 
 
   </style>
@@ -93,11 +91,9 @@
 <body>
   <header  class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      {% load static %}
-      <a class="navbar-left" href="home.html"><img src="{%static 'static/imgs/teamlogo.png' %}"/></a>
-      <!-- <div class="logo-image">
-      {% load static %}
-      </div> -->
+      <a class="navbar-left" href="home.html"><img src="{%static 'imgs/finalist logo ico.ico' %}"
+        width="60" height="60"/> </a>  <p><strong>  FinalLists</strong></P>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -105,8 +101,8 @@
 
       <div class="navbar-nav mx-auto" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li> -->
             <li class="nav-item active">
                 <a class="nav-link" href="searchByAdd.html">Search by Address <span class="sr-only"></span> </a></li>
             <li class="nav-item active">
@@ -115,10 +111,10 @@
                 <a class="nav-link" href="signup.html">Sign Up</a></li>
             <li class="nav-item">
                 <a class="nav-link" href="signin.html">Sign In</a></li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="survey.html">Survey</a></li>
             <li class="nav-item">
-                <a class="nav-link" href="map.html">Map</a></li>
+                <a class="nav-link" href="map.html">Map</a></li> -->
         </ul>
 
 
@@ -132,13 +128,10 @@
       <div class="container">
         <h1 class="jumbotron-heading">FinalLists</h1>
         <p class="lead text-muted">It is where you live...</p>
-
-
-
+<!--
         <p>
           <a href="mailto:boshenfeng@gmail.com" class="btn btn-primary my-2">Email Us Now</a>
-        </p>
-
+        </p> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <form class="example" action="action_page.php">
@@ -158,7 +151,6 @@
               {#                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">#}
               <title>Placeholder</title>
 
-              {% load static %}
               <img src="{% static '/imgs/img1.jpg' %}" alt="My image" style="height: 225px; width: 348px;">
 
               </svg>
