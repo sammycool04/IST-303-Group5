@@ -1,10 +1,13 @@
-let houseAdd = window.location.href.split('?')[1].split('=')[1];
 
 $(document).ready( function(){
     let url = window.location.href;
     console.log("splitted url: ");console.log(url);
-    let uri = window.location.search;
+    let uri = window.location.search[1];
     console.log("search part: "); console.log(uri);
+    let houseAdd = window.location.href.split('?')[1];
+    if(houseAdd !== undefined){
+        $.get("sbAdd", houseAdd, function(resultData){handleSearchQuery(resultData);});
+    }
 });
 
 let searchB = $("#searchBar");
