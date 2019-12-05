@@ -1,3 +1,11 @@
+let houseAdd = window.location.href.split('?')[1].split('=')[1];
+
+$(document).ready( function(){
+    let url = window.location.href;
+    console.log("splitted url: ");console.log(url);
+    let uri = window.location.search;
+    console.log("search part: "); console.log(uri);
+});
 
 let searchB = $("#searchBar");
 let searchR = $("#searchResults");
@@ -5,11 +13,12 @@ let searchR = $("#searchResults");
 
 searchB.submit( function (event) {
     event.preventDefault();
-    submitSearchForm(event);
+    let searchQuery = $("#searchBar").serialize();
+    console.log(searchQuery);
+    submitSearchForm(searchQuery);
 });
 
-function submitSearchForm(formSubmitEvent) {
-    let searchQuery = $("#searchBar").serialize();
+function submitSearchForm(searchQuery) {
     $.get("sbAdd", searchQuery, function(resultData){handleSearchQuery(resultData);});
 }
 
@@ -72,3 +81,16 @@ function handleSearchQuery(resultData) {
 
 // $("moreBtn").onclick()
 
+
+
+// $().on('load',
+//     jQuery.ajax({
+//         dataType:"json",
+//         method:"GET",
+//         url: "sbAdd",
+//         data: {'starDetail': sid},
+//         success: function(resultData){getStarInfo(resultData)},
+//         error: function (jqXhr, textStatus, errorMessage) {
+//             console.log("Error", errorMessage)
+//         }
+//     }));

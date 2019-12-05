@@ -52,15 +52,38 @@
 		</nav>
 	</header>
 
+
     <main role="main">
 
-        <div class="container form-sm form-2 pl-0" style="margin-top: 10%;margin-bottom: 10%;width: 100%;">
-            <form id="searchBar" class="form-inline md-form mr-auto mb-4" action="#" method="get" style="margin: auto">
-                <input id="sa" name="sa" class="form-control mr-sm-1" type="text" placeholder="Search"
-                    aria-label="Search" style="width: 90%;">
-                <button class="btn btn-primary aqua-gradient btn-sm my-0" type="submit">Search</button>
+        <div class="container" style="background-color: #3366bb">
+            <form id="searchBar" class="form-inline md-form mr-auto mb-4" action="#" method="get">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="sa" class="sr-only"></label>
+                    <input id="sa" name="sa" class="form-control" type="text"  placeholder="Search">
+                </div>
+                <button class="btn btn-primary mb-2" type="submit">Search</button>
             </form>
         </div>
+
+
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+
+
+
+
+        <!-- Example single danger button -->
+
 
 
 
