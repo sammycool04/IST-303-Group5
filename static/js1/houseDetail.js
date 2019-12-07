@@ -1,22 +1,20 @@
 console.log(" In astar.js : \n");
 
 //retrieve the query part from url
-let houseId = window.location.href.split('?')[1].split('=')[1];
+let houseId = window.location.href.split('?')[1];
 console.log("splitted url: ");console.log(houseId);
 
 let searchR = $("#searchResults");
 
 
-$.get("sbId", {'id':houseId}, function(resultData){handleSearchQuery(resultData);});
+$.get("sbId", houseId, function(resultData){handleSearchQuery(resultData);});
 
 function handleSearchQuery(resultData) {
     searchR.html("");
-
     console.log(resultData.length);console.log(resultData);
 
     // let data = JSON.parse(resultData);
     // console.log("getForm: ");console.log(resultData);console.log("json data: ");console.log(data);
-
 
     let rowEntry = '<div class="row">';
     if(resultData.length === 0){
