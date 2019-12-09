@@ -1,9 +1,5 @@
 
 $(document).ready( function(){
-    let url = window.location.href;
-    console.log("splitted url: ");console.log(url);
-    let uri = window.location.search[1];
-    console.log("search part: "); console.log(uri);
     let houseAdd = window.location.href.split('?')[1];
     if(houseAdd !== undefined){
         $.get("sbAdd", houseAdd, function(resultData){handleSearchQuery(resultData);});
@@ -28,10 +24,7 @@ function submitSearchForm(searchQuery) {
 function handleSearchQuery(resultData) {
     $("#resultDiv").show();
     searchR.html("");
-
-    console.log(resultData.length);console.log(resultData);
-
-
+    // console.log(resultData.length);console.log(resultData);
     // let data = JSON.parse(resultData);
     // console.log("getForm: ");console.log(resultData);console.log("json data: ");console.log(data);
     let rowEntry = '<div class="row">';
@@ -42,17 +35,6 @@ function handleSearchQuery(resultData) {
     }
     else{
         for (let i = 0; i < resultData.length; i++) {
-            // rowEntry += '<div class="card" style="margin-top:10%;width:90%;">';
-            // rowEntry += '<div class="card"><img src="' + resultData[i]['image'] + '" style="width:400px;height:300px;" alt="Image">' + '</div>';
-            // rowEntry += '<div>' + 'Address: ' + resultData[i]['address'] + '</div>';
-            // rowEntry += '<div>' + 'Price:   ' + resultData[i]['price'] + '</div>';
-            // rowEntry += '<div>' + 'Room: ' + resultData[i]['room'] + '</div>';
-            // rowEntry += '<div>' + 'Bath: ' + resultData[i]['bath'] + '</div>';
-            // rowEntry += '<div>' + 'Size: ' + resultData[i]['size'] + 'sq ft</div>';
-            // rowEntry += '<div>' + 'Summary: ' + resultData[i]['summary'] + '</div>';
-            // rowEntry += '<div>' + 'For ' + resultData[i]['categories'] + '</div>';
-            // rowEntry += '</div>';
-
 
             rowEntry += '<div class="col-md-4"><div class="card mb-4 shadow-sm">';
             rowEntry += '<img class="resultImg" src="' + resultData[i]['image'] + '" alt="image..">';
@@ -67,12 +49,8 @@ function handleSearchQuery(resultData) {
             rowEntry += '<button type="button" class="btn btn-sm btn-outline-secondary moreBtn" ' +
                 'onclick="window.location.href = \'houseDetail.html?id=' +  resultData[i]['id'] + '\'">More Details</button>';
             rowEntry += '</div>';
-            // rowEntry += '<p class="card-text">Summary: ' + resultData[i]['summary'] + '</p>';
-            // rowEntry += '<p class="card-text">For ' + resultData[i]['categories'] + '</p>';
 
             rowEntry += '</div></div></div>';
-
-
 
         }
         rowEntry += '</div>';
@@ -84,16 +62,3 @@ function handleSearchQuery(resultData) {
 
 // $("moreBtn").onclick()
 
-
-
-// $().on('load',
-//     jQuery.ajax({
-//         dataType:"json",
-//         method:"GET",
-//         url: "sbAdd",
-//         data: {'starDetail': sid},
-//         success: function(resultData){getStarInfo(resultData)},
-//         error: function (jqXhr, textStatus, errorMessage) {
-//             console.log("Error", errorMessage)
-//         }
-//     }));
