@@ -1,9 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 import house.views as vw
+# from account import views
 
 
 urlpatterns = [
@@ -13,6 +14,8 @@ urlpatterns = [
     path('home.html', views.homepage, name='homepg'),
     path('signup.html', views.signup, name='signup'),
     path('signin.html', views.signin, name='signin'),
+    # path('signout.html', views.signout, name = 'signout'),
+    path('account/', include('account.urls')),
 
     path('searchByAdd.html', views.searchByAdd, name='searchByAdd'),
     path('searchByPre.html', views.searchByPre, name='searchByPre'),
