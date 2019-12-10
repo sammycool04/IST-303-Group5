@@ -51,8 +51,6 @@
                         <a class="nav-link" href="searchByPre.html">Search by Preferences <span class="sr-only"></span>
                         </a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a></li>
-                    <li class="nav-item">
                         <a class="nav-link" href="signup.html">Sign Up</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="signin.html">Sign In</a></li>
@@ -67,70 +65,7 @@
         </nav>
     </header>
 
-    <main role="main">
 
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">FinalLists</h1>
-                <p class="lead text-muted">It is where you live...</p>
-
-                <form class="example" action="searchByAdd.html" method="get">
-                    <input type="text" placeholder="Search.." name="sa">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </section>
-
-        <div class="album py-5 bg-light">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="homeimg" src="/static/imgs/img1.jpg" alt="My image">
-                            <div class="card-body">
-                                <p class="card-text">Amazing house with great values!</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="homeimg" src="/static/imgs/img3.jpg" alt="My image">
-
-                            <div class="card-body">
-                                <p class="card-text">Super comfortable family rooms!</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="homeimg" src="/static/imgs/img4.jpg" alt="My image">
-
-                            <div class="card-body">
-                                <p class="card-text">Super comfortable family rooms!</p>
-                                <div class="d-flex justify-content-between align-items-center">
-{#                                    <div class="btn-group"></div>#}
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
 
     <footer class="text-muted">
         <div class="container text-center">
@@ -154,3 +89,12 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 <script src="/static/js1/home.js"></script>
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+Hello again
