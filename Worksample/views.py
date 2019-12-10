@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-# from django.http import HttpResponse, HttpResponseRedirect
-# from django.core import serializers
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core import serializers
 # from django.utils import simplejson
-# from .forms import NameForm
-# from house.models import HouseInfo
-# import operator
+from .forms import NameForm
+from house.models import HouseInfo
+import operator
+from django.contrib.auth.models import User
+from django.contrib import auth
 
 
 def homepage(request):
@@ -29,7 +31,6 @@ def signup(request):
         return render(request,'account/signup.html')
 
 def signin(request):
-<<<<<<< HEAD
     if request.method == 'POST':
         auth.authenticate(username=request.POST['username'],password=request.POST['password'])
         if user is not None:
@@ -43,10 +44,8 @@ def signin(request):
 def signout(request):
     if request.method == 'POST':
         auth.logout(request)
-        return redirect('home')    
-=======
+        return redirect('home')
     return render(request, 'signin.html')
->>>>>>> 4ed91a725acc8cc0332835b552f64342af48b94d
 
 def searchByAdd(request):
     return render(request, 'searchByAdd.html')
@@ -70,7 +69,7 @@ def zillow(request):
 
 
 
-# .................................................................
+
 
 def getForm(request):
     reqDict = request.GET.dict()
@@ -127,9 +126,6 @@ def searchByAddResult(request):
     # return ret
 
     # return HttpResponse(request.GET.items())
-
-
-
 
 
 
