@@ -1,19 +1,21 @@
 
 $(document).ready( function(){
     let houseAdd = window.location.href.split('?')[1];
+    console.log('houseAdd??');console.log(houseAdd);console.log('......');
     if(houseAdd !== undefined){
-        $.get("sbAdd", houseAdd, function(resultData){handleSearchQuery(resultData);});
+        submitSearchForm(houseAdd);
     }
 });
 
 let searchB = $("#searchBar");
-let searchR = $("#searchResults");
+let searchR = $("#searchResultsField");
 
 
 searchB.submit( function (event) {
     event.preventDefault();
     let searchQuery = $("#searchBar").serialize();
-    console.log(searchQuery);
+    console.log('sQuery:?');console.log(searchQuery);
+
     submitSearchForm(searchQuery);
 });
 
@@ -22,8 +24,10 @@ function submitSearchForm(searchQuery) {
 }
 
 function handleSearchQuery(resultData) {
-    $("#resultDiv").show();
+    // console.log('searchResult:??');console.log(resultData);
     searchR.html("");
+
+    $("#resultDiv").show();
     // console.log(resultData.length);console.log(resultData);
     // let data = JSON.parse(resultData);
     // console.log("getForm: ");console.log(resultData);console.log("json data: ");console.log(data);

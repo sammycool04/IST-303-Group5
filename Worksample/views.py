@@ -3,10 +3,10 @@ from django.http import JsonResponse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core import serializers
 # from django.utils import simplejson
-from .forms import NameForm
-from house.models import HouseInfo
-import operator
-from django.contrib.auth.models import User
+# from .forms import NameForm
+# from house.models import HouseInfo
+# import operator
+# from django.contrib.auth.models import User
 from django.contrib import auth
 
 
@@ -98,17 +98,61 @@ def searchByPreResult(request):
     pass
 
 def searchByAddResult(request):
-    rec = request.GET.get('sa')
-    if rec:
-        data = house_data()
+    # return JsonResponse(request.GET, safe=False)
+    add = request.GET.get('sa')
+    price = request.GET.get('price')
+    nBeds = request.GET.get('nBeds')
+    nBath = request.GET.get('nBath')
+
+
+    if add:
+        houses = house_data()
         retDic = []
-        for dic in data:
-            if rec in dic['address'].lower().strip():
-                retDic.append(dic)
+        for house in houses:
+            # if isMeetConditions(add, nBeds, nBath, price, house):
+            if isAddFound(add, house) and isNumOfB(nBeds, house['room']):
+                retDic.append(house)
         return JsonResponse(retDic, safe=False)
-
-
     return JsonResponse([], safe=False)
+
+
+    # if add:
+    #     houses = house_data()
+    #     retDic = []
+    #     for house in houses:
+    #         if add in house['address'].lower().strip():
+    #             retDic.append(house)
+    #     return JsonResponse(retDic, safe=False)
+    #
+    # return JsonResponse([], safe=False)
+
+def isMeetConditions(add, nbe, nba, p, house):
+    return isAddFound(add, house) and isNumOfB(nbe, house['room']) and isNumOfB(nba, house['bath']) and isPriceRange(p, house)
+
+def isAddFound(add, house):
+    return add in house['address'].lower().strip()
+
+def isNumOfB(numBB, hb):
+    numBB = int(numBB)
+    if numBB == 0:
+        return True
+    if numBB == 7:
+        return hb > 6
+    else:
+        return hb == numBB
+
+def isPriceRange(price, house):
+    price = float(price)
+    if price == 0:
+        return True
+    elif price == 1:
+        return house['price'] <= 300000
+    elif price == 2:
+        return 300000 < house['price'] <= 600000
+    elif price == 3:
+        return 600000 < house['price'] <= 900000
+    else:
+        return house['price'] > 900000
 
     # if this is a POST request we need to process the form data
     # if request.method == 'POST':
@@ -1561,9 +1605,13 @@ def house_data():
 
 
 if __name__ == '__main__':
-    dsa = house_data()
-    for di in dsa:
-        print('claremont' in di['address'].lower())
+    houses = house_data()
+    for house in houses:
+        # print('claremont' in house['address'].lower())
+
+        if isNumOfB(3, house['room']):
+            print(house)
+
 
 
     # insertData('')

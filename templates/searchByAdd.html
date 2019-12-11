@@ -11,73 +11,120 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
 
+    <link href="/static/css1/searchByAdd.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="static/css1/searchByAdd.css" rel="stylesheet">
 
 </head>
 
 <body>
-	<header class="sticky-top">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="home.html">FinalLists</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-left" href="home.html"><img src="{%static 'imgs/finalist logo ico.ico' %}" width="60"
+                    height="60" /> </a>
+            <p><strong> FinalLists</strong></P>
 
-			<div class="navbar-nav mx-auto" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active">
-						<a class="nav-link" href="searchByAdd.html">Search by Address <span class="sr-only"></span> </a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="searchByPre.html">Search by Preferences <span class="sr-only"></span>
-						</a></li>
-					<li class="nav-item">
-						<a class="nav-link" href="signup.html">Sign Up</a></li>
-					<li class="nav-item">
-						<a class="nav-link" href="signin.html">Sign In</a></li>
-					<li class="nav-item">
-						<a class="nav-link" href="survey.html">Survey</a></li>
-					<li class="nav-item">
-						<a class="nav-link" href="map.html">Map</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-nav mx-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item active">
+                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li> -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="searchByAdd.html">Advanced Search<span class="sr-only"></span> </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">Sign In</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html">Survey</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Map</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 
     <main role="main">
-
-        <div class="container" style="background-color: #3366bb">
-            <form id="searchBar" class="form-inline md-form mr-auto mb-4" action="#" method="get">
-                <div class="form-group mx-sm-3 mb-2">
+        <div class="container searchBarDiv">
+            <form id="searchBar" class="form-inline md-form mr-auto"  action="searchByAdd.html" method="get">
+                <div style="width: 50%;">
                     <label for="sa" class="sr-only"></label>
-                    <input id="sa" name="sa" class="form-control" type="text"  placeholder="Search">
+                    <input id="sa" name="sa" class="form-control" type="text"  placeholder="Search" style="width: 80%;">
                 </div>
-                <button class="btn btn-primary mb-2" type="submit">Search</button>
+                <button class="btn btn-primary" type="submit">Search</button>
+
+                <div style="width: 100%;">
+                    <div class="dropdown sortBtnPos btn" >
+                        <span id="priceText" class="a-size-base">Price: </span>
+                        <label for="price"></label>
+                        <select id="price" class="selectionChange" name="price" onchange="">
+                            <option value="0">any</option>
+                            <option value="1">0 - $300K</option>
+                            <option value="2">$300K - $600K</option>
+                            <option value="3">$600K - $900K</option>
+                            <option value="4">>$900K</option>
+                        </select>
+                    </div>
+                    <div class="sortBtnPos btn" >
+                        <span id="numBedsText" class="a-size-base">Beds: </span>
+                        <label for="numBeds"></label>
+                        <select id="numBeds" class="selectionChange" name="nBeds" onchange="">
+                            <option value="0">any</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">6+</option>
+                        </select>
+                    </div>
+                    <div class="sortBtnPos btn">
+                        <span id="numBathText" class="a-size-base">Bath: </span>
+                        <label for="numBath"></label>
+                        <select id="numBath" class="selectionChange" name="nBath" onchange="">
+                            <option value="0">any</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">6+</option>
+                        </select>
+                    </div>
+                </div>
             </form>
+
         </div>
 
 
 
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Action</button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-        </div>
+{#        <div class="btn-group">#}
+{#            <div class="dropdown mr-1">#}
+{#                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Action</button>#}
+{#                <div class="dropdown-menu">#}
+{#                    <a class="dropdown-item" href="#">Action</a>#}
+{#                    <a class="dropdown-item" href="#">Another action</a>#}
+{#                    <a class="dropdown-item" href="#">Something else here</a>#}
+{#                    <div class="dropdown-divider"></div>#}
+{#                    <a class="dropdown-item" href="#">Separated link</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+
+
 
 
 
@@ -89,7 +136,7 @@
 
 
         <div class="container" id="resultDiv" style="display:none;margin-top: 10%;">
-            <div class="container" id="searchResults"></div>
+            <div class="container" id="searchResultsField"></div>
 
 
 
