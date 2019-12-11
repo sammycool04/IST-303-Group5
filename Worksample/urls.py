@@ -37,6 +37,9 @@ urlpatterns = [
     # ..............................................................
 
     path('zillow.html', views.zillow, name='zillow'),
+    # path('bootstrap_form.html', vw.BootstrapFilterView, name='Bootstrapform')
+
+
     # path('getForm', views.getForm, name='getForms')
 
 
@@ -47,7 +50,7 @@ urlpatterns = [
 
 
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 # if settings.DEBUG:
 #     urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
