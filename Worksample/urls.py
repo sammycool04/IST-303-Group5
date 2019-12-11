@@ -37,7 +37,7 @@ urlpatterns = [
     # ..............................................................
 
     path('zillow.html', views.zillow, name='zillow'),
-    path('bootstrap_form.html', vw.BootstrapFilterView, name='Bootstrapform')
+    # path('bootstrap_form.html', vw.BootstrapFilterView, name='Bootstrapform')
 
 
     # path('getForm', views.getForm, name='getForms')
