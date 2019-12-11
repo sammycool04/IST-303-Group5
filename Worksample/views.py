@@ -52,8 +52,6 @@ def signout(request):
 def searchByAdd(request):
     return render(request, 'searchByAdd.html')
 
-def searchByPre(request):
-    return render(request, 'searchByPre.html')
 
 def houseDetail(request):
     return render(request, 'houseDetail.html')

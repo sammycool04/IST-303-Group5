@@ -19,7 +19,6 @@ urlpatterns = [
     path('profile.html', views.profile,name='profile'),
 
     path('searchByAdd.html', views.searchByAdd, name='searchByAdd'),
-    path('searchByPre.html', views.searchByPre, name='searchByPre'),
     path('houseDetail.html', views.houseDetail, name='houseDetail'),
     path('survey.html', views.survey, name='survey'),
     path('map.html', views.showMap, name='showmap'),
