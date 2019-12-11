@@ -16,7 +16,7 @@ urlpatterns = [
     path('signin.html', views.signin, name='signin'),
     # path('signout.html', views.signout, name = 'signout'),
     path('account/', include('account.urls')),
-    path('profile.html', views.profile,name='profile'),
+    path('profile.html', views.profile, name='profile'),
 
     path('searchByAdd.html', views.searchByAdd, name='searchByAdd'),
     path('houseDetail.html', views.houseDetail, name='houseDetail'),
