@@ -6,7 +6,7 @@ from django.core import serializers
 # from .forms import NameForm
 # from house.models import HouseInfo
 # import operator
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from django.contrib import auth
 
 
@@ -24,7 +24,7 @@ def signup(request):
                 return render(request, 'account/signup.html', {'error':'Username has already been taken'})
             except User.DoesNotExist:
                 user = User.objects.create_user(request.POST['username'],password=request.POST['password1'])
-                auth.login(request,user)
+                auth.login(request, user)
                 return redirect('homepg')
         else:
             return render(request, 'account/signup.html', {'error':'password must match'})
@@ -34,7 +34,7 @@ def signup(request):
 
 def signin(request):
     if request.method == 'POST':
-        auth.authenticate(username=request.POST['username'],password=request.POST['password'])
+        user = auth.authenticate(username=request.POST['username'],password=request.POST['password'])
         if user is not None:
             auth.login(request,user)
             return redirect('homepg')
@@ -69,12 +69,10 @@ def zillow(request):
 
 
 
-
-
+# testing purpose
 def getForm(request):
     reqDict = request.GET.dict()
     print(reqDict)
-
     return render(request, 'searchByAdd.html', {'d1': 'abcde'})
 
 
@@ -108,12 +106,11 @@ def searchByAddResult(request):
         nBath = 0
 
     if add:
-        houses = house_data()
+        housesD = house_data()
         retDic = []
-        for house in houses:
-            if isMeetConditions(add, nBeds, nBath, price, house):
-            # if isAddFound(add, house) and isNumOfB(nBeds, house['room']):
-                retDic.append(house)
+        for hs in housesD:
+            if isMeetConditions(add, nBeds, nBath, price, hs):
+                retDic.append(hs)
         return JsonResponse(retDic, safe=False)
     return JsonResponse([], safe=False)
 
@@ -128,11 +125,11 @@ def searchByAddResult(request):
     #
     # return JsonResponse([], safe=False)
 
-def isMeetConditions(add, nbe, nba, p, house):
-    return isAddFound(add, house) and isNumOfB(nbe, house['room']) and isNumOfB(nba, house['bath']) and isPriceRange(p, house)
+def isMeetConditions(add, nbe, nba, p, hs):
+    return isAddFound(add, hs) and isNumOfB(nbe, hs['room']) and isNumOfB(nba, hs['bath']) and isPriceRange(p, hs)
 
-def isAddFound(add, house):
-    return add in house['address'].lower().strip()
+def isAddFound(add, hs):
+    return add in hs['address'].lower().strip()
 
 def isNumOfB(numBB, hb):
     numBB = int(numBB)
@@ -143,18 +140,18 @@ def isNumOfB(numBB, hb):
     else:
         return hb == numBB
 
-def isPriceRange(price, house):
+def isPriceRange(price, hs):
     price = float(price)
     if price == 0:
         return True
     elif price == 1:
-        return house['price'] <= 300000
+        return hs['price'] <= 300000
     elif price == 2:
-        return 300000 < house['price'] <= 600000
+        return 300000 < hs['price'] <= 600000
     elif price == 3:
-        return 600000 < house['price'] <= 900000
+        return 600000 < hs['price'] <= 900000
     else:
-        return house['price'] > 900000
+        return hs['price'] > 900000
 
     # if this is a POST request we need to process the form data
     # if request.method == 'POST':
