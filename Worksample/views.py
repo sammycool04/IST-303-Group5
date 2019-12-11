@@ -102,13 +102,17 @@ def searchByAddResult(request):
     nBeds = request.GET.get('nBeds')
     nBath = request.GET.get('nBath')
 
+    if not price:
+        price = 0.0
+        nBeds = 0
+        nBath = 0
 
     if add:
         houses = house_data()
         retDic = []
         for house in houses:
-            # if isMeetConditions(add, nBeds, nBath, price, house):
-            if isAddFound(add, house) and isNumOfB(nBeds, house['room']):
+            if isMeetConditions(add, nBeds, nBath, price, house):
+            # if isAddFound(add, house) and isNumOfB(nBeds, house['room']):
                 retDic.append(house)
         return JsonResponse(retDic, safe=False)
     return JsonResponse([], safe=False)
