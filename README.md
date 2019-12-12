@@ -3,8 +3,7 @@
 
 ### PROJECT DESCRIPTION
 FinalList is a web application that enables users to identify their ideal housing option. Users can generate their personalized housing lists based on their inputed parameters such as
-* crime rate risk levels and proximity to area amenities (schools based on performance rankings, grocery stores,
-gas stations, banks, restauarants, etc.)
+* crime rate risk levels and proximity to area amenities (schools, grocery stores)
 * recreation space (hiking and biking trails, parks, etc.) that
 coincide with selected rental or sales ranges
 *bedroom/bathroom combinations and other housing-related 
@@ -75,8 +74,7 @@ See https://github.com/sammycool04/IST-303-Group5/blob/master/Project%20Hours%20
 ### TEAM MEETING NOTES
 Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
 
-
-### To Run the Application:
+### TO RUN THE APPLICATION:
 1. Install Python 3
     - On macOS using Homebrew:
     ```shell script
@@ -100,7 +98,6 @@ Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
     ```shell script
      #Ubuntu 18.04
      curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-     exit
      sudo apt-get update
      sudo ACCEPT_EULA=Y apt-get install msodbcsql17
      # optional: for bcp and sqlcmd
@@ -144,9 +141,6 @@ Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
 8. To access the web app, open your web browser, enter: 
     [127.0.0.1:8000](127.0.0.1:8000 "Finalists")
 	
-
-
-
 ### TESTING:
 * We use pytest-django and mixer for our testing
 - If you haven't installed the packages, in your terminal, type:
@@ -158,4 +152,11 @@ pip install mixer
 ```
 pytest
 ```
-
+### LESSONS LEARNED: SOFTWARE DEVELOPMENT
+* Identify the most appropriate platform to develop and test your code and house your data as early as possible in the process.
+* Refer back to the initial user stories to help stay focused on what drove the development in the first place.
+* Have a clear idea of everyone’s roles are and have everyone actively take ownership of those roles but allow for some flexibility as needed in where help can be offered.
+* Allow for learning in estimating hours. 
+* Be flexible in what tools can be used and new ideas.
+* Software development is a team effort.
+* Agile methods are not always easy to adhere to if all team members are not on the same page, otherwise, staying agile would be effective.
