@@ -38,7 +38,7 @@ The members of this group are Sam Feng, Alex Jin, Kieu Lara, Rutuja Ganesh Limay
 ### TECHNOLOGY
 * Frontend: HTML, CSS, JavaScript
 * Backend: Python, Django
-* Database: SQL
+* Database: Microsoft Azure SQL
  
 ### PROJECT MANAGEMENT/COLLABORATION TOOLS
 * GitHub
@@ -142,14 +142,16 @@ Agenda Link: https://drive.google.com/open?id=1zvve-Ctsv2qc7kWy-xecymomQILijSlj
     [127.0.0.1:8000](127.0.0.1:8000 "Finalists")
 	
 ### TESTING:
-* We use pytest-django and mixer for our testing
+* We use pytest-django, mixer and pytest-cov for our testing
 - If you haven't installed the packages, in your terminal, type:
 ```shell script
 pip install pytest-django
 pip install mixer
+pip install pytest-cov
 ```
-* Remember to keep your Postgres database running. In your terminal, type:
 ```
+pytest-cov 
+or 
 pytest
 ```
 ### LESSONS LEARNED: SOFTWARE DEVELOPMENT
