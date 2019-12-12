@@ -26,3 +26,23 @@ class TestUrls:
     def test_sbPre_url(self):
         path = reverse('sbPre')
         assert resolve(path).view_name == 'sbPre'
+
+    def test_sbPre_url(self):
+        path = reverse('profile')
+        ssert resolve(path).view_name == 'profile'
+
+    def test_sbPre_url(self):
+        path = reverse('houseDetail')
+        assert resolve(path).view_name == 'houseDetail'
+
+    def test_sbPre_url(self):
+        path = reverse('survey')
+        assert resolve(path).view_name == 'survey'
+
+    def test_sbPre_url(self):
+        path = reverse('showmap')
+        assert resolve(path).view_name == 'showmap'
+
+    def test_sbPre_url(self):
+        path = reverse('insertD')
+        assert resolve(path).view_name == 'insertD'

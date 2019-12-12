@@ -22,5 +22,5 @@ class TestProductModel:
             summary="Sample house",
             price=500
         )
-        assert house.name == Sample house
+        assert house.name == "Sample house"
         assert house.price == 500
